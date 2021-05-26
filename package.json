@@ -1,6 +1,8 @@
 {
   "name": "corona-ui",
   "version": "0.0.1",
+  "author": "langyo",
+  "repository": "https://github.com/RA3CoronaDevelopers/CoronaUI.git",
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
