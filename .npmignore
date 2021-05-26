@@ -30,5 +30,7 @@ yarn.lock
 *.log
 *.swp
 
-/dist
+/src
+/.storybook
+/stories
 /storybook-static

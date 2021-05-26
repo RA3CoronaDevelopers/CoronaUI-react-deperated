@@ -1,37 +1,17 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import { Button, IButtonProps } from './Button';
+import { Button, IButtonProps } from '../src/core/Button';
 
 // tslint:disable-next-line: no-default-export
 export default {
-  title: 'Example/Button',
+  title: 'Button',
   component: Button,
   argTypes: {
-    backgroundColor: { control: 'color' },
+    label: { type: 'string', defaultValue: 'test' },
+    color: { control: 'color', defaultValue: '#66ccff' }
   }
 } as Meta;
 
-const Template: Story<IButtonProps> = (args) => <Button {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: 'Button'
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
+export const Base: Story<IButtonProps> = (args) => <Button
+  {...args}
+/>;

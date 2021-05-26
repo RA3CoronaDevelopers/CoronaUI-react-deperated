@@ -1,0 +1,12 @@
+{
+  "include": [
+    "./src/**/*"
+  ],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "jsx": "react-jsx",
+    "module": "CommonJS",
+    "declaration": true,
+    "esModuleInterop": true
+  }
+}
