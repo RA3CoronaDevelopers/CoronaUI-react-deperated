@@ -1,10 +1,10 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import { Button, IButtonProps } from '../src/core/Button';
+import { Button, IButtonProps } from '../src/components/Button';
 
 // tslint:disable-next-line: no-default-export
 export default {
-  title: 'Button',
+  title: 'Components/Button',
   component: Button,
   argTypes: {
     label: { type: 'string', defaultValue: 'test' },
@@ -12,6 +12,6 @@ export default {
   }
 } as Meta;
 
-export const Base: Story<IButtonProps> = (args) => <Button
+export const Base: Story<IButtonProps> = args => <Button
   {...args}
 />;
