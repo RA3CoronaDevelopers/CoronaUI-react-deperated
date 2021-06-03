@@ -16,7 +16,8 @@
     "react-dom": "^17.0.1",
     "react-draggable": "^4.4.3",
     "react-transition-group": "^4.4.1",
-    "shortid": "^2.2.16"
+    "shortid": "^2.2.16",
+    "slow-json-stringify": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
