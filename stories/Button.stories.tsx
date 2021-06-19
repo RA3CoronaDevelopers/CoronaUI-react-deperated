@@ -8,10 +8,8 @@ export default {
   component: Button,
   argTypes: {
     label: { type: 'string', defaultValue: 'test' },
-    color: { control: 'color', defaultValue: '#66ccff' }
-  }
+    color: { control: 'color', defaultValue: '#66ccff' },
+  },
 } as Meta;
 
-export const Base: Story<IButtonProps> = args => <Button
-  {...args}
-/>;
+export const Base: Story<IButtonProps> = args => <Button {...args} />;
