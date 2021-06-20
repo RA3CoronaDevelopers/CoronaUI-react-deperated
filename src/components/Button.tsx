@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from '@emotion/css';
 
 export interface IButtonProps {
-  color?: string,
+  color?: string;
   label?: string;
   onClick?: () => any;
 }
@@ -10,7 +10,9 @@ export interface IButtonProps {
 export const Button: React.FC<IButtonProps> = ({
   color = '#000',
   label = '',
-  onClick = () => { return; }
+  onClick = () => {
+    return;
+  },
 }) => {
   return (
     <button
@@ -21,7 +23,7 @@ export const Button: React.FC<IButtonProps> = ({
         border-radius: 4px;
         font-size: 16px;
         background: transparent;
-        transition: background .2s;
+        transition: background 0.2s;
         &:hover {
           background: rgba(0, 0, 0, 0.1);
         }
