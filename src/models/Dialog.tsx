@@ -5,8 +5,9 @@ import { mdiWindowMinimize, mdiWindowMaximize, mdiClose } from '@mdi/js';
 
 export interface IDialogProps {
   bgColor?: string;
-  icon?: React.Component;
+  icon?: React.ReactNode;
   title?: string;
+  titleColor?: string;
   showTitleBar?: boolean;
   canMinimize?: boolean | 'disable' | 'show' | 'none';
   canMaximize?: boolean | 'disable' | 'show' | 'none';
@@ -27,6 +28,7 @@ export const Dialog: React.FC<IDialogProps> = ({
   bgColor = '#22272e',
   icon,
   title = '',
+  titleColor = '#fff',
   showTitleBar = true,
   canMinimize = false,
   canMaximize = false,
@@ -96,7 +98,7 @@ export const Dialog: React.FC<IDialogProps> = ({
               width: 32px;
               height: 32px;
               position: absolute;
-              left: 8px;
+              left: 4px;
               top: 0px;
               display: flex;
               align-items: center;
@@ -106,22 +108,22 @@ export const Dialog: React.FC<IDialogProps> = ({
             {icon}
           </div>
         )}
-        {icon && (
-          <div
-            className={css`
-              min-width: 16px;
-              height: 32px;
-              line-height: 32px;
-              position: absolute;
-              left: ${icon ? 40 : 8}px;
-              top: 0px;
-              font-size: 14px;
-              user-select: none;
-            `}
-          >
-            {title}
-          </div>
-        )}
+        <div
+          className={css`
+            min-width: 16px;
+            height: 32px;
+            line-height: 32px;
+            position: absolute;
+            left: ${icon ? 40 : 8}px;
+            top: 0px;
+            font-size: 12px;
+            font-family: sans-serif;
+            user-select: none;
+            color: ${titleColor};
+          `}
+        >
+          {title}
+        </div>
         {/* Controllers */}
         <div
           className={css`
