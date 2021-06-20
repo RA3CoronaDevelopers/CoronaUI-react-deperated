@@ -149,15 +149,15 @@ export const Dialog: React.FC<IDialogProps> = ({
                 justify-content: center;
                 background: transparent;
                 border-radius: 4px;
-                transition: background 0.3s;
+                transition: background 0.2s;
                 ${canMinimize !== 'disable' &&
                 `&:hover {
-              background: rgba(255, 255, 255, .2);
-            }
-            &:active {
-              background: rgba(255, 255, 255, .4);
-            }
-            `}
+                  background: rgba(255, 255, 255, .2);
+                }
+                &:active {
+                  background: rgba(255, 255, 255, .4);
+                }
+                `}
               `}
               onClick={() =>
                 canMinimize && canMinimize !== 'disable' && onMinimize()
@@ -185,13 +185,16 @@ export const Dialog: React.FC<IDialogProps> = ({
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                background: transparent;
+                border-radius: 4px;
+                transition: background 0.2s;
                 ${canMaximize !== 'disable' &&
                 `&:hover {
-              background: rgba(255, 255, 255, .2);
-            }
-            &:active {
-              background: rgba(255, 255, 255, .4);
-            }
+                  background: rgba(255, 255, 255, .2);
+                }
+                &:active {
+                  background: rgba(255, 255, 255, .4);
+                }
             `}
               `}
               onClick={() =>
@@ -222,15 +225,15 @@ export const Dialog: React.FC<IDialogProps> = ({
                 justify-content: center;
                 background: transparent;
                 border-radius: 4px;
-                transition: background 0.3s;
+                transition: background 0.2s;
                 ${canClose !== 'disable' &&
                 `&:hover {
-              background: rgba(255, 255, 255, .2);
-            }
-            &:active {
-              background: rgba(255, 255, 255, .4);
-            }
-            `}
+                  background: rgba(255, 255, 255, .2);
+                }
+                &:active {
+                  background: rgba(255, 255, 255, .4);
+                }
+                `}
               `}
               onClick={() => canClose && canClose !== 'disable' && onClose()}
             >
