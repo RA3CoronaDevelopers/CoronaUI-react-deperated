@@ -1,7 +1,8 @@
 import React from 'react';
 
-export interface IMediaQueryContextProps {}
+export interface IMediaQueryProps {}
 
-export const MediaQueryContext: React.FC<IMediaQueryContextProps> = ({}) => {
+// TODO - The component's children should be a function. It's like the React Hook's context provider.
+export const MediaQuery: React.FC<IMediaQueryProps> = ({}) => {
   return <div />;
 };

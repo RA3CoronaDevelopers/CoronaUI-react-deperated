@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from '@emotion/css';
+import { css, cx } from '@emotion/css';
 import { Icon } from '@mdi/react';
 import { mdiWindowMinimize, mdiWindowMaximize, mdiClose } from '@mdi/js';
 
@@ -19,6 +19,7 @@ export interface IDialogProps {
     type: 'down' | 'move' | 'up',
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => any;
+  className?: string;
   children?: any;
 }
 
@@ -43,20 +44,23 @@ export const Dialog: React.FC<IDialogProps> = ({
   onDrag = () => {
     return;
   },
+  className,
   children,
 }) => {
-  // TODO - Use 'Box' component instead of 'div'.
   // TODO - Give the props that can set the basic styles into box components.
   return (
     <div
-      className={css`
-        width: 400px; /* These are temporarily values. */
-        height: 300px;
-        margin: 0px;
-        padding: 0px;
-        position: relative;
-        background: ${bgColor};
-      `}
+      className={cx(
+        css`
+          width: 400px; /* These are temporarily values. */
+          height: 300px;
+          margin: 0px;
+          padding: 0px;
+          position: relative;
+          background: ${bgColor};
+        `,
+        className || ''
+      )}
     >
       {/* Title bar */}
       <div
