@@ -14,17 +14,17 @@ export default {
     titleColor: { control: 'color', defaultValue: '#fff' },
     showTitleBar: { control: 'boolean', defaultValue: true },
     canMinimize: {
-      control: 'radio',
+      type: 'radio',
       defaultValue: 'show',
       options: [true, false, 'disable', 'show', 'none'],
     },
     canMaximize: {
-      control: 'radio',
+      type: 'radio',
       defaultValue: 'show',
       options: [true, false, 'disable', 'show', 'none'],
     },
     canClose: {
-      control: 'radio',
+      type: 'radio',
       defaultValue: 'show',
       options: [true, false, 'disable', 'show', 'none'],
     },
