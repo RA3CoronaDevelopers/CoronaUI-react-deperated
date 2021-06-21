@@ -4,7 +4,7 @@ import { Icon } from '@mdi/react';
 import { mdiWindowMinimize, mdiWindowMaximize, mdiClose } from '@mdi/js';
 
 export interface IDialogProps {
-  bgColor?: string;
+  background?: string | React.ReactNode;
   icon?: React.ReactNode;
   title?: string;
   titleColor?: string;
@@ -25,7 +25,7 @@ export interface IDialogProps {
 }
 
 export const Dialog: React.FC<IDialogProps> = ({
-  bgColor = '#22272e',
+  background = '#22272e',
   icon,
   title = '',
   titleColor = '#fff',
@@ -59,7 +59,7 @@ export const Dialog: React.FC<IDialogProps> = ({
           margin: 0px;
           padding: 0px;
           position: relative;
-          background: ${bgColor};
+          ${typeof background === 'string' ? `background: ${background};` : ''}
         `,
         className || ''
       )}
@@ -262,6 +262,24 @@ export const Dialog: React.FC<IDialogProps> = ({
       >
         {children}
       </div>
+      {/* Background */}
+      {background && typeof background !== 'string' && (
+        <div
+          className={css`
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            z-index: -1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          `}
+        >
+          {background}
+        </div>
+      )}
     </div>
   );
 };
