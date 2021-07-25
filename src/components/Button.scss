@@ -1,0 +1,33 @@
+.button {
+  width: max-content;
+  height: 32px;
+  padding: 2px 8px;
+  position: relative;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: sans-serif;
+  user-select: none;
+  background: transparent;
+  transition: background 0.2s;
+  &:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  &:active {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    border-radius: 4px;
+    background: #fff;
+    opacity: 0.2;
+  }
+}
+

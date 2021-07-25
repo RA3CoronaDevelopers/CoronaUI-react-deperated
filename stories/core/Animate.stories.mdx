@@ -1,32 +1,35 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import '!style-loader!css-loader!sass-loader!./Animate.scss';
 import { AnimateContext, AnimateBase } from '../../src/core/AnimateContext';
+import { Button } from '../../src/components/Button';
 
 <Meta title="Core/Animate" component={AnimateContext} />
 
-# 动画上下文
+# 动画上下文 Animation context
 
 动画上下文是专为组件机制设计的一套动画控制逻辑。
 组件提供者使用由此提供的`AnimateBase`包装设计好的组件，
 使用者则可以通过`AnimateContext`为此类组件设置是否展示的状态，从而做到更顺滑、流畅的界面切换效果。
 
+Animation context is a set of animation control logic designed for component mechanism.
+The component provider uses the provided `AnimateBase` to package the designed components,
+Users can set whether to display the status of such components through `AnimateContext`,
+so as to achieve a smoother and smoother interface switching effect.
+
 在使用动画上下文进行状态控制之前，需要先定义一个以`AnimateBase`包装的组件。
 
-<Canvas>
-  <Story name="AnimateContext 使用示例" args={{}}>
-    <AnimateContext show>
-      <AnimateBase
-        styles={{
-          hasEnter: 'button-enter',
-          onEntering: 'button-entering',
-          hasLeave: 'button-leave',
-          onLeaving: 'button-leaving',
-        }}
-      >
-        <button className="button">测试</button>
-      </AnimateBase>
-    </AnimateContext>
-  </Story>
-</Canvas>
+Before using the animation context for state control, you need to define a component wrapped in `AnimateBase`.
 
-你妈的为什么 storybook 死活加载不了 scss 啊艹!!!
+<Canvas>
+  <AnimateContext show>
+    <AnimateBase
+      styles={{
+        hasEnter: 'button-enter',
+        onEntering: 'button-entering',
+        hasLeave: 'button-leave',
+        onLeaving: 'button-leaving',
+      }}
+    >
+      <Button>大丘丘病了，二丘丘瞧</Button>
+    </AnimateBase>
+  </AnimateContext>
+</Canvas>
