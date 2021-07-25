@@ -1,0 +1,23 @@
+.button {
+  height: 32px;
+  min-width: 64px;
+  margin: 4px;
+  padding: 4px;
+  border: 1px solid #114514;
+  background: #fff;
+  border-radius: 4px;
+  :hover {
+    background: #eee;
+  }
+  transition: all 0.3s;
+}
+
+.button-enter, .button-leaving {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.button-entering, .button-leave {
+  opacity: 1;
+  transform: scale(1);
+}

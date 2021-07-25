@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import { Button, IButtonProps } from '../src/components/Button';
+import { Button, IButtonProps } from '../../src/components/Button';
 import { Icon } from '@mdi/react';
 import { mdiAccountCircleOutline } from '@mdi/js';
 

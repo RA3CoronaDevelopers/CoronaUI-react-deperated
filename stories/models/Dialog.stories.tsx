@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import { Dialog, IDialogProps } from '../src/models/Dialog';
+import { Dialog, IDialogProps } from '../../src/models/Dialog';
 import { css } from '@emotion/css';
 import { Icon } from '@mdi/react';
 import { mdiAccountCircleOutline } from '@mdi/js';
