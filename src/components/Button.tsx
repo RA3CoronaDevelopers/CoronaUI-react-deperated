@@ -18,8 +18,9 @@ export const Button: React.FC<IButtonProps> = ({
   children,
 }) => {
   return (
-    <div className="button" onClick={onClick}>
+    <div className="button-outside">
       {children}
+      <div className="button-inside" onClick={onClick} />
     </div>
   );
 };

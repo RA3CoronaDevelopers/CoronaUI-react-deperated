@@ -1,33 +1,32 @@
-.button {
-  width: max-content;
+.button-outside {
+  width: min-content;
   height: 32px;
-  padding: 2px 8px;
-  position: relative;
+  padding: 4px;
   border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  font-family: sans-serif;
-  user-select: none;
-  background: transparent;
-  transition: background 0.2s;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+  box-shadow: 0px 0px 1px 1px #00000033;
   &:hover {
-    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 2px 1px #00000033;
   }
   &:active {
-    background: rgba(0, 0, 0, 0.2);
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    border-radius: 4px;
-    background: #fff;
-    opacity: 0.2;
+    box-shadow: 0px 0px 4px 1px #00000033;
   }
 }
 
+.button-inside {
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  background-image: linear-gradient(135deg, #ffd26f99 10%, #3677ff99 100%);
+  transition: background 0.2s, transform 0.2s;
+  &:hover {
+    transform: rotate(30deg);
+  }
+  &:active {
+    transform: rotate(60deg);
+  }
+}
