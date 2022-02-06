@@ -1,4 +1,5 @@
 import React from 'react';
+import './tabs.scss';
 
 export interface ITabsProps {
   anchor?: 'top' | 'bottom' | 'left' | 'right';

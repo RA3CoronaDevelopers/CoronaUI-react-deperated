@@ -1,4 +1,5 @@
 import React from 'react';
+import './richTextPanel.scss';
 
 export interface IRichTextPanelProps {}
 

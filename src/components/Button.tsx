@@ -1,5 +1,6 @@
 import React from 'react';
-import './Button.scss';
+import './button.scss';
+
 export interface IButtonProps {
   color?: string;
   variant?: 'filled' | 'outlined' | 'void';

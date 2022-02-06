@@ -1,4 +1,5 @@
 import React from 'react';
+import './drawer.scss';
 
 export interface IDrawerProps {
   anchor?: 'top' | 'bottom' | 'left' | 'right';

@@ -1,4 +1,5 @@
 import React from 'react';
+import './checkBox.scss';
 
 export interface ICheckBoxProps {}
 

@@ -1,5 +1,4 @@
 import React, { useContext, createContext } from 'react';
-import { CSSTransition } from 'react-transition-group';
 
 const AnimateContextInterop = createContext({
   show: false,
@@ -107,19 +106,5 @@ export const AnimateBase: React.FC<IAnimateBaseProps> = ({
 }) => {
   const { show, timeout } = useContext(AnimateContextInterop);
 
-  return (
-    <CSSTransition
-      in={show}
-      timeout={timeout * 1000}
-      classNames={{
-        enter: hasEnter,
-        enterActive: onEntering,
-        leave: hasLeave,
-        leaveActive: onLeaving,
-      }}
-      unmountOnExit
-    >
-      {children}
-    </CSSTransition>
-  );
+  return children;
 };

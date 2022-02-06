@@ -1,4 +1,5 @@
 import React from 'react';
+import './list.scss';
 
 export interface IListProps {}
 

@@ -1,13 +1,14 @@
 import React from 'react';
+import './progress.scss';
 
-export interface ILinearProgressProps {}
+export interface ILinearProgressBarProps {}
 
-export const LinearProgress: React.FC<ILinearProgressProps> = ({}) => {
+export const LinearProgressBar: React.FC<ILinearProgressBarProps> = ({}) => {
   return <div />;
 };
 
-export interface IBoxedProgressProps {}
+export interface ICircularProgressIconProps {}
 
-export const BoxedProgress: React.FC<IBoxedProgressProps> = ({}) => {
+export const CircularProgressIcon: React.FC<ICircularProgressIconProps> = ({}) => {
   return <div />;
 };

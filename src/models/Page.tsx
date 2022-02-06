@@ -1,4 +1,5 @@
 import React from 'react';
+import './page.scss';
 
 export interface IPageProps {}
 

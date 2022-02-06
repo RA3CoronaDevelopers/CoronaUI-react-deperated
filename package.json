@@ -4,39 +4,33 @@
   "author": "langyo",
   "license": "Apache-2.0",
   "repository": "https://github.com/RA3CoronaDevelopers/CoronaUI.git",
-  "main": "./dist/index.js",
+  "main": "./index.js",
   "scripts": {
     "build": "tsc",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@emotion/css": "^11.5.0",
-    "@mdi/js": "^6.5.95",
-    "@mdi/react": "^1.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-draggable": "^4.4.4",
-    "react-transition-group": "^4.4.2",
-    "shortid": "^2.2.16",
-    "slow-json-stringify": "^2.0.1"
+    "shortid": "^2.2.16"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@storybook/addon-actions": "^6.4.4",
-    "@storybook/addon-essentials": "^6.4.4",
-    "@storybook/addon-links": "^6.4.4",
-    "@storybook/builder-webpack5": "^6.4.4",
-    "@storybook/manager-webpack5": "^6.4.4",
+    "@babel/core": "^7.17.0",
+    "@storybook/addon-actions": "^6.4.18",
+    "@storybook/addon-essentials": "^6.4.18",
+    "@storybook/addon-links": "^6.4.18",
+    "@storybook/builder-webpack5": "^6.4.18",
+    "@storybook/manager-webpack5": "^6.4.18",
     "@storybook/preset-scss": "^1.0.3",
-    "@storybook/react": "^6.4.4",
+    "@storybook/react": "^6.4.18",
     "babel-loader": "^8.2.3",
-    "css-loader": "^6.5.1",
-    "sass": "^1.44.0",
-    "sass-loader": "^12.3.0",
+    "css-loader": "^6.6.0",
+    "sass": "^1.49.7",
+    "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
     "tslint": "^6.1.3",
-    "typescript": "^4.5.2",
-    "webpack": "^5.64.4"
+    "typescript": "^4.5.5",
+    "webpack": "^5.68.0"
   }
 }

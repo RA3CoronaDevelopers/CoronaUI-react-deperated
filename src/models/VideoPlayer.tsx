@@ -1,4 +1,5 @@
 import React from 'react';
+import './videoPlayer.scss';
 
 export interface IVideoPlayerProps {}
 

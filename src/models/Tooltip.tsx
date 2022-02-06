@@ -1,7 +1,8 @@
 import React from 'react';
+import './toolTip.scss';
 
-export interface ITooltipProps {}
+export interface IToolTipProps {}
 
-export const Tooltip: React.FC<ITooltipProps> = ({}) => {
+export const ToolTip: React.FC<IToolTipProps> = ({}) => {
   return <div />;
 };

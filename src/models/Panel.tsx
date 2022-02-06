@@ -1,4 +1,5 @@
 import React from 'react';
+import './panel.scss';
 
 export interface IPanelProps {}
 
