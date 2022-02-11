@@ -1,0 +1,47 @@
+.dialog-border-outside {
+  position: relative;
+  width: var(--width, max-content);
+  height: var(--height, max-content);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-border-inside {
+  width: 400px;
+  height: 300px;
+  background: linear-gradient(to bottom, #ffefa0, #ffc07f);
+  clip-path: url(#dialog-border-line);
+}
+
+.dialog-border-top-left {
+  @extend .dialog-border-inside;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transform: scale(1, 1);
+}
+
+.dialog-border-top-right {
+  @extend .dialog-border-inside;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  transform: scale(-1, 1);
+}
+
+.dialog-border-bottom-left {
+  @extend .dialog-border-inside;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  transform: scale(1, -1);
+}
+
+.dialog-border-bottom-right {
+  @extend .dialog-border-inside;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  transform: scale(-1, -1);
+}

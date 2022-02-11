@@ -1,32 +1,108 @@
-.button-outside {
-  width: min-content;
-  height: 32px;
-  padding: 4px;
-  border-radius: 4px;
+
+.button-border-outside {
   position: relative;
-  overflow: hidden;
-  transition: box-shadow 0.2s;
-  box-shadow: 0px 0px 1px 1px #00000033;
-  &:hover {
-    box-shadow: 0px 0px 2px 1px #00000033;
-  }
-  &:active {
-    box-shadow: 0px 0px 4px 1px #00000033;
+  height: min-content;
+  width: min-content;
+}
+
+.button-border-inside {
+  position: relative;
+  border: none;
+  outline: none;
+  margin: 8px 4px;
+  padding: 4px 40px;
+  height: 56px;
+  width: max-content;
+  line-height: calc(48px - 8px);
+  font-size: 24px;
+  font-family: "楷体";
+  color: #fff;
+  background: radial-gradient(
+    circle,
+    #ab8221,
+    #c9b37f 90%
+  );
+  clip-path: polygon(24px 50%, 32px 4px, calc(100% - 32px) 4px, calc(100% - 24px) 50%, calc(100% - 32px) calc(100% - 4px), 32px calc(100% - 4px));
+
+  &::before {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: #ab8221;
+    content: '';
+    clip-path: polygon(
+      24px 50%,
+      32px 4px,
+      calc(100% - 32px) 4px,
+      calc(100% - 24px) 50%,
+      calc(100% - 32px) calc(100% - 4px),
+      32px calc(100% - 4px),
+      24px 50%,
+      26px 50%,
+      34px calc(100% - 6px),
+      calc(100% - 34px) calc(100% - 6px),
+      calc(100% - 26px) 50%,
+      calc(100% - 34px) 6px,
+      34px 6px,
+      26px 50%
+    );
   }
 }
 
-.button-inside {
-  width: 200%;
-  height: 200%;
+.button-border-shadow {
   position: absolute;
-  left: -50%;
-  top: -50%;
-  background-image: linear-gradient(135deg, #ffd26f99 10%, #3677ff99 100%);
-  transition: background 0.2s, transform 0.2s;
-  &:hover {
-    transform: rotate(30deg);
-  }
-  &:active {
-    transform: rotate(60deg);
-  }
+  left: 12px;
+  right: 12px;
+  top: 0px;
+  height: 100%;
+  background: radial-gradient(
+    closest-side,
+    #c9b37f,
+    #ffebbd 60%,
+    transparent 100%
+  );
+  clip-path: polygon(12px 4px, calc(100% - 12px) 4px, calc(100% - 4px) 50%, calc(100% - 12px) calc(100% - 4px), 14px calc(100% - 4px), 4px 50%);
+}
+
+
+.button-border-slice-left {
+  position: absolute;
+  left: 16px;
+  top: 0px;
+  width: 16px;
+  height: 100%;
+  clip-path: polygon(0% 16px, 100% 16px, 100% calc(100% - 16px), 0% calc(100% - 16px));
+}
+
+.button-border-left {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    #ab8221,
+    #c9b37f 90%
+  );
+  clip-path: polygon(16px 0px, 20px 0px, 8px 50%, 20px 100%, 16px 100%, 4px 50%);
+}
+
+.button-border-slice-right {
+  position: absolute;
+  right: 16px;
+  top: 0px;
+  width: 16px;
+  height: 100%;
+  clip-path: polygon(0% 16px, 100% 16px, 100% calc(100% - 16px), 0% calc(100% - 16px));
+}
+
+.button-border-right {
+  width: 16px;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    #ab8221,
+    #c9b37f 90%
+  );
+  clip-path: polygon(0px 0px, -4px 0px, 8px 50%, -4px 100%, 0px 100%, 12px 50%);
 }

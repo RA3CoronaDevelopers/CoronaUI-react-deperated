@@ -19,9 +19,17 @@ export const Button: React.FC<IButtonProps> = ({
   children,
 }) => {
   return (
-    <div className="button-outside">
-      {children}
-      <div className="button-inside" onClick={onClick} />
+    <div className='background'>
+      <div className='button-border-outside'>
+        <div className='button-border-shadow' />
+        <div className='button-border-slice-left'>
+          <div className='button-border-left' />
+        </div>
+        <div className='button-border-slice-right'>
+          <div className='button-border-right' />
+        </div>
+        <button className='button-border-inside'>{children}</button>
+      </div>
     </div>
   );
 };

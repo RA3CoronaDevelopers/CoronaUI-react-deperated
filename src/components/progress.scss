@@ -1,0 +1,42 @@
+.circular-progress-component {
+  width: 10em;
+  height: 10em;
+  font-size: 20px;
+  background-image: linear-gradient(white 50%, black 50%);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+  animation: rotating linear 5s infinite;
+}
+
+@keyframes rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.circular-progress-component::before,
+.circular-progress-component::after {
+  content: '';
+  width: 50%;
+  height: 50%;
+  background-color: var(--inner-color);
+  box-sizing: border-box;
+  border: 1.5em solid var(--outer-color);
+}
+
+.circular-progress-component::before {
+  --inner-color: white;
+  --outer-color: black;
+}
+
+.circular-progress-component::after {
+  --inner-color: black;
+  --outer-color: white;
+}
+
+.circular-progress-component,
+.circular-progress-component::before,
+.circular-progress-component::after {
+  border-radius: 50%;
+}

@@ -9,6 +9,7 @@ export const LinearProgressBar: React.FC<ILinearProgressBarProps> = ({}) => {
 
 export interface ICircularProgressIconProps {}
 
-export const CircularProgressIcon: React.FC<ICircularProgressIconProps> = ({}) => {
-  return <div />;
-};
+export const CircularProgressIcon: React.FC<ICircularProgressIconProps> =
+  ({}) => {
+    return <div className='circular-progress-component' />;
+  };
