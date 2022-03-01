@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './button.scss';
 
 export interface IButtonProps {
@@ -18,17 +18,39 @@ export const Button: React.FC<IButtonProps> = ({
   className,
   children,
 }) => {
+  const [isHover, setHover] = useState(false);
+
   return (
     <div className='background'>
       <div className='button-border-outside'>
         <div className='button-border-shadow' />
-        <div className='button-border-slice-left'>
+        <div
+          className='button-border-slice-left'
+          style={
+            {
+              '--left': isHover ? '8px' : '16px',
+            } as any
+          }
+        >
           <div className='button-border-left' />
         </div>
-        <div className='button-border-slice-right'>
+        <div
+          className='button-border-slice-right'
+          style={
+            {
+              '--right': isHover ? '8px' : '16px',
+            } as any
+          }
+        >
           <div className='button-border-right' />
         </div>
-        <button className='button-border-inside'>{children}</button>
+        <button
+          className='button-border-inside'
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+        >
+          {children}
+        </button>
       </div>
     </div>
   );
