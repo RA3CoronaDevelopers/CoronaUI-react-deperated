@@ -55,28 +55,78 @@ export const Dialog: React.FC<IDialogProps> = ({
       <svg width={0} height={0}>
         <defs>
           <clipPath id='dialog-border-line'>
-            <rect x={0} y={0} width={36} height={10} />
-            <rect x={0} y={0} width={10} height={36} />
-            <rect x={0} y={26} width={82} height={10} />
-            <rect x={26} y={0} width={10} height={82} />
-            <rect x={0} y={46} width={102} height={10} />
-            <rect x={46} y={0} width={10} height={102} />
-            <rect x={0} y={46} width={10} height={36} />
-            <rect x={0} y={72} width={36} height={10} />
-            <rect x={46} y={0} width={36} height={10} />
-            <rect x={72} y={0} width={10} height={36} />
-            <rect x={0} y={92} width={56} height={10} />
-            <rect x={92} y={0} width={10} height={56} />
-            <rect x={0} y={92} width={10} height={36} />
-            <rect x={92} y={0} width={36} height={10} />
-            <rect x={0} y={118} width={16} height={10} />
-            <rect x={118} y={0} width={10} height={16} />
-            <rect x={10} y={118} width={10} height={36} />
-            <rect x={118} y={10} width={36} height={10} />
-            <rect x={0} y={144} width={16} height={10} />
-            <rect x={144} y={0} width={10} height={16} />
-            <rect x={0} y={144} width={10} height={100} />
-            <rect x={144} y={0} width={100} height={10} />
+            <rect x={0} y={0} width={36 * 0.618} height={10 * 0.618} />
+            <rect x={0} y={0} width={10 * 0.618} height={36 * 0.618} />
+            <rect x={0} y={26 * 0.618} width={82 * 0.618} height={10 * 0.618} />
+            <rect x={26 * 0.618} y={0} width={10 * 0.618} height={82 * 0.618} />
+            <rect
+              x={0}
+              y={46 * 0.618}
+              width={102 * 0.618}
+              height={10 * 0.618}
+            />
+            <rect
+              x={46 * 0.618}
+              y={0}
+              width={10 * 0.618}
+              height={102 * 0.618}
+            />
+            <rect x={0} y={46 * 0.618} width={10 * 0.618} height={36 * 0.618} />
+            <rect x={0} y={72 * 0.618} width={36 * 0.618} height={10 * 0.618} />
+            <rect x={46 * 0.618} y={0} width={36 * 0.618} height={10 * 0.618} />
+            <rect x={72 * 0.618} y={0} width={10 * 0.618} height={36 * 0.618} />
+            <rect x={0} y={92 * 0.618} width={56 * 0.618} height={10 * 0.618} />
+            <rect x={92 * 0.618} y={0} width={10 * 0.618} height={56 * 0.618} />
+            <rect x={0} y={92 * 0.618} width={10 * 0.618} height={36 * 0.618} />
+            <rect x={92 * 0.618} y={0} width={36 * 0.618} height={10 * 0.618} />
+            <rect
+              x={0}
+              y={118 * 0.618}
+              width={16 * 0.618}
+              height={10 * 0.618}
+            />
+            <rect
+              x={118 * 0.618}
+              y={0}
+              width={10 * 0.618}
+              height={16 * 0.618}
+            />
+            <rect
+              x={10 * 0.618}
+              y={118 * 0.618}
+              width={10 * 0.618}
+              height={36 * 0.618}
+            />
+            <rect
+              x={118 * 0.618}
+              y={10 * 0.618}
+              width={36 * 0.618}
+              height={10 * 0.618}
+            />
+            <rect
+              x={0}
+              y={144 * 0.618}
+              width={16 * 0.618}
+              height={10 * 0.618}
+            />
+            <rect
+              x={144 * 0.618}
+              y={0}
+              width={10 * 0.618}
+              height={16 * 0.618}
+            />
+            <rect
+              x={0}
+              y={144 * 0.618}
+              width={10 * 0.618}
+              height={100 * 0.618}
+            />
+            <rect
+              x={144 * 0.618}
+              y={0}
+              width={100 * 0.618}
+              height={10 * 0.618}
+            />
           </clipPath>
         </defs>
       </svg>
@@ -93,6 +143,12 @@ export const Dialog: React.FC<IDialogProps> = ({
         <div className='dialog-border-top-right' />
         <div className='dialog-border-bottom-left' />
         <div className='dialog-border-bottom-right' />
+        <div className='dialog-border-outside-shadow'>
+          <div className='dialog-border-top-left' />
+          <div className='dialog-border-top-right' />
+          <div className='dialog-border-bottom-left' />
+          <div className='dialog-border-bottom-right' />
+        </div>
       </div>
     </>
   );
