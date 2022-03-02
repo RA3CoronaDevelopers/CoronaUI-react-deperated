@@ -1,3 +1,11 @@
+export { Border } from './base/border';
+export { Flex } from './base/flex';
+export { Grid } from './base/grid';
+export { Halo } from './base/halo';
+export { Level } from './base/level';
+export { Spacing } from './base/spacing';
+export { Typography } from './base/typography';
+
 export { Button } from './components/button';
 export { CheckBox } from './components/checkBox';
 export { Divider } from './components/divider';
@@ -24,12 +32,10 @@ export { ThemeContext } from './core/themeContext';
 
 export { AudioPlayer } from './models/audioPlayer';
 export { AudioStreamPanel } from './models/audioStreamPanel';
+export { Avatar, ProfilePanel } from './models/avatar';
 export { BadgeBox } from './models/badge';
 export { DateTimeInputer } from './models/dateTimeInputer';
-export { Dialog } from './models/dialog';
-export { Drawer } from './models/drawer';
 export { Menu, MenuItem } from './models/menu';
-export { Page } from './models/page';
 export { Panel } from './models/panel';
 export { RefreshDragHelper } from './models/refreshDragHelper';
 export { RichTextPanel } from './models/richTextPanel';
@@ -38,3 +44,8 @@ export { Tabs } from './models/tabs';
 export { ToolTip } from './models/toolTip';
 export { VideoPlayer } from './models/videoPlayer';
 export { ImageStreamPanel } from './models/imageStreamPanel';
+
+export { BreadCrumb } from './pages/breadCrumb';
+export { Dialog } from './pages/dialog';
+export { Drawer } from './pages/drawer';
+export { SideBar } from './pages/sideBar';

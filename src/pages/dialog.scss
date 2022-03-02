@@ -22,7 +22,7 @@
 .dialog-border-inside {
   width: 400px;
   height: 300px;
-  background: linear-gradient(to bottom, var(--color-secondary), var(--color-primary));
+  background: linear-gradient(to bottom, var(--color-secondary-most), var(--color-primary-most));
   clip-path: url(#dialog-border-line);
 }
 
