@@ -1,0 +1,54 @@
+*,
+html,
+body {
+  font-family: var(--font-content, serif);
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  --color-background-mainly: rgba(40, 32, 23, 0.8);
+  --color-background-header: rgba(177, 147, 112, 0.5);
+  --color-background-footer: rgba(111, 94, 78, 0.5);
+
+  --color-primary: rgb(125, 102, 8);
+  --color-primary-most: rgba(125, 102, 8, 0.8);
+  --color-primary-half: rgba(125, 102, 8, 0.5);
+  --color-primary-less: rgba(125, 102, 8, 0.2);
+
+  --color-secondary: rgb(154, 125, 10);
+  --color-secondary-most: rgba(154, 125, 10, 0.8);
+  --color-secondary-half: rgba(154, 125, 10, 0.5);
+  --color-secondary-less: rgba(154, 125, 10, 0.2);
+
+  --color-dark: rgb(0, 0, 0);
+  --color-dark-most: rgba(0, 0, 0, 0.8);
+  --color-dark-half: rgba(0, 0, 0, 0.5);
+  --color-dark-less: rgba(0, 0, 0, 0.2);
+
+  --color-light: rgb(255, 255, 255);
+  --color-light-most: rgba(255, 255, 255, 0.8);
+  --color-light-half: rgba(255, 255, 255, 0.5);
+  --color-light-less: rgba(255, 255, 255, 0.2);
+}
+
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  font-family: var(--font-title, cursive);
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  background: var(--color-background-mainly);
+}
+
+$width-mobile: 60rem;

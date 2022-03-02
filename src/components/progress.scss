@@ -1,8 +1,11 @@
 .circular-progress-component {
-  width: 10em;
-  height: 10em;
-  font-size: 20px;
-  background-image: linear-gradient(white 50%, black 50%);
+  width: var(--size, 32px);
+  height: var(--size, 32px);
+  font-size: calc(var(--size, 32px) / 8);
+  background-image: linear-gradient(
+    var(--color-light) 50%,
+    var(--color-dark) 50%
+  );
   display: flex;
   align-items: center;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
@@ -22,17 +25,17 @@
   height: 50%;
   background-color: var(--inner-color);
   box-sizing: border-box;
-  border: 1.5em solid var(--outer-color);
+  border: calc(var(--size, 32px) / 8 * 1.5) solid var(--outer-color);
 }
 
 .circular-progress-component::before {
-  --inner-color: white;
-  --outer-color: black;
+  --inner-color: var(--color-light);
+  --outer-color: var(--color-dark);
 }
 
 .circular-progress-component::after {
-  --inner-color: black;
-  --outer-color: white;
+  --inner-color: var(--color-dark);
+  --outer-color: var(--color-light);
 }
 
 .circular-progress-component,

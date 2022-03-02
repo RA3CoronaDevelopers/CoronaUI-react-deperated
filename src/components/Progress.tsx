@@ -7,9 +7,17 @@ export const LinearProgressBar: React.FC<ILinearProgressBarProps> = ({}) => {
   return <div />;
 };
 
-export interface ICircularProgressIconProps {}
+export interface ICircularProgressIconProps {
+  size?: string | number;
+}
 
-export const CircularProgressIcon: React.FC<ICircularProgressIconProps> =
-  ({}) => {
-    return <div className='circular-progress-component' />;
-  };
+export const CircularProgressIcon: React.FC<ICircularProgressIconProps> = ({
+  size,
+}) => {
+  return (
+    <div
+      className='circular-progress-component'
+      style={{ '--size': typeof size === 'number' ? `${size}px` : size } as any}
+    />
+  );
+};

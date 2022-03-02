@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../global.scss';
 import './button.scss';
 
 export interface IButtonProps {
